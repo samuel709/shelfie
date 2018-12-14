@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 
 app.get('/api/inventory', controller.getInventory)
 app.post('/api/product', controller.addProduct)
+app.delete('/api/product/:id', controller.deleteProduct)
 
 massive(CONNECTION_STRING).then(connection => {
     app.set('db', connection)

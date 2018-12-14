@@ -12,6 +12,7 @@ class Product extends Component {
                 <img src={this.props.image} alt="image not found" width={50} height={50}/>
                 {this.props.product}
                 {this.props.price}
+                <button onClick={() => {this.props.deleteProduct(this.props.id)}}>Delete</button>
             </div>
         )
     }
